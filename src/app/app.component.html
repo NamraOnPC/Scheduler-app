@@ -6,9 +6,13 @@
         <h2 class="heading">{{title}}</h2>
           <app-add
           (addEvt)="addApt($event)"></app-add>
-          <app-search></app-search>
-          <app-list [aptList]="theList"
-          (deleteEvent)="deleteApt($event)"></app-list>
+          <app-search
+          (queryEvt)="searchApt($event)"
+          (orderEvt)="orderApt($event)"
+          [orderBy]="orderBy"
+          [orderType]="orderType"></app-search>
+          <app-list [aptList]="modifiedList"
+          (deleteEvent)="deleteApt($event)" (updateEvent)="updateApt($event)"></app-list>
         </div>
       </div><!-- col-md-12 -->
     </div><!-- row -->
