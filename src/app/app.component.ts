@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
   }
 
   addApt(theApt: any) {
-    theApt.aptId = this.lastIndex;
+    theApt.taskId = this.lastIndex;
     this.theList.unshift(theApt);
     this.modifiedList.unshift(theApt);
     this.lastIndex++;
@@ -67,7 +67,7 @@ export class AppComponent implements OnInit {
         return -1 * order;
       }
       if (a[this.orderBy].toLowerCase() < b[this.orderBy].toLowerCase()) {
-        return 1 * order;;
+        return 1 * order;
       }
     });
   }

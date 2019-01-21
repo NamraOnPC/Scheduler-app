@@ -1,8 +1,8 @@
-<div class="card textcenter mt-3" [ngClass]="{'add-appointment': showForm}">
+<div class="card textcenter mt-3" [ngClass]="{'add-task': showForm}">
 
   <div class="apt-addheading card-header bg-primary text-white"
   (click)="toggleAptDisplay()">
-   <fa-icon icon="plus"></fa-icon> Add Appointment
+   <fa-icon icon="plus"></fa-icon> Add Task
   </div><!-- card-header -->
 
   <div class="card-body">
@@ -12,44 +12,44 @@
     #aptForm="ngForm">
 
       <div class="form-group form-row">
-        <label class="col-md-2 col-form-label text-md-right" for="petName">Pet Name</label>
+        <label class="col-md-2 col-form-label text-md-right" for="taskName">Task Name</label>
         <div class="col-md-10">
-          <input type="text" class="form-control" name="petName" id="petName" placeholder="Pet's Name" ngModel="">
+          <input type="text" class="form-control" name="taskName" id="taskName" placeholder="Task Name" ngModel="">
         </div><!-- col-md-10 -->
       </div><!-- form-group -->
 
       <div class="form-group form-row">
         <label class="col-md-2 col-form-label text-md-right"
-               for="ownerName">Pet Owner</label>
+               for="ownerName">Task Owner</label>
         <div class="col-md-10">
           <input type="text" class="form-control" name="ownerName"
-                 id="ownerName" placeholder="Owner's Name" ngModel="">
+                 id="ownerName" placeholder="Task Owner's Name" ngModel="">
         </div><!-- col-md-10 -->
       </div><!-- form-group -->
 
       <div class="form-group form-row">
-        <label class="col-md-2 col-form-label text-md-right" for="aptDate">Date</label>
+        <label class="col-md-2 col-form-label text-md-right" for="taskDate">Date</label>
         <div class="col-md-4">
-          <input type="date" class="form-control" id="aptDate" name="aptDate" ngModel="">
+          <input type="date" class="form-control" id="taskDate" name="taskDate" ngModel="">
         </div><!-- col-md-4 -->
-        <label class="col-md-2 col-form-label text-md-right" for="aptTime">Time</label>
+        <label class="col-md-2 col-form-label text-md-right" for="taskTime">Time</label>
         <div class="col-md-4">
-          <input type="time" class="form-control" name="aptTime" id="aptTime" ngModel="">
+          <input type="time" class="form-control" name="taskTime" id="taskTime" ngModel="">
         </div><!-- col-md-4 -->
       </div><!-- form-group -->
 
       <div class="form-group form-row">
-        <label class="col-md-2 text-md-right" for="aptNotes">Apt. Notes</label>
+        <label class="col-md-2 text-md-right" for="taskNotes">Task Notes</label>
         <div class="col-md-10">
           <textarea class="form-control" rows="4" cols="50"
-                    name="aptNotes" id="aptNotes" placeholder="Appointment Notes" ngModel=""></textarea>
+                    name="taskNotes" id="taskNotes" placeholder="Task Notes" ngModel=""></textarea>
         </div><!-- col-md-10 -->
       </div><!-- form-group -->
 
       <div class="form-group form-row mb-0">
         <div class="offset-md-2 col-md-10">
           <button type="submit" class="btn btn-primary d-block ml-auto"
-          >Add Appointment</button>
+          >Add Task</button>
         </div><!-- col-md-offset-2 -->
       </div><!-- form-group -->
 

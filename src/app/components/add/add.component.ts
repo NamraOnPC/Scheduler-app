@@ -2,8 +2,7 @@ import { Component, OnInit , Output , EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-add',
-  templateUrl: './add.component.html',
-  styleUrls: ['./add.component.css']
+  templateUrl: './add.component.html'
 })
 export class AddComponent implements OnInit {
 
@@ -17,10 +16,10 @@ export class AddComponent implements OnInit {
 
   handleAdd(formInfo: any) {
     const tempItem: object = {
-      petName: formInfo.petName,
+      taskName: formInfo.taskName,
       ownerName: formInfo.ownerName,
-      aptDate: formInfo.aptDate + ' ' + formInfo.aptTime,
-      aptNotes: formInfo.aptNotes,
+      taskDate: formInfo.taskDate + ' ' + formInfo.taskTime,
+      taskNotes: formInfo.taskNotes,
     };
 
     this.addEvt.emit(tempItem);
